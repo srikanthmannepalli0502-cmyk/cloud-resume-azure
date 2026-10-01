@@ -89,8 +89,8 @@
           <a class="date" href="https://github.com/srikanthmannepalli0502-cmyk/job-hunter-auto">Source</a>
         </div>
         <ul>
-          <li>Built an end-to-end Python pipeline that scrapes LinkedIn and Indeed postings with Playwright, de-duplicates jobs across runs and scores each one 0&ndash;100 against a weighted skills profile.</li>
-          <li>Tailors the resume for top matches with an LLM (Llama 3.3 70B via Groq), generates a one-page ATS-friendly PDF with page-count verification, and auto-fills application forms; jobs are tracked in a SQL database through SQLAlchemy.</li>
+          <li>Built a Python CLI that pulls postings from the Adzuna and Remotive job APIs, de-duplicates them across runs and scores each one 0&ndash;100 against a weighted skills profile.</li>
+          <li>Tailors the resume for top matches with an LLM (Llama 3.3 70B via Groq) and keeps it to one page by measuring the rendered PDF and trimming line by line; tracks applications in SQLite via SQLAlchemy, with 24 pytest tests in CI.</li>
         </ul>
       </article>
       <article>
