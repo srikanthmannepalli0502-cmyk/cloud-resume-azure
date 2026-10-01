@@ -1,0 +1,25 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+tfplan
+crash.log
+*.tfvars
+!*.tfvars.example
+infra/backend.hcl
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Azure Functions local settings (may contain secrets)
+backend/local.settings.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

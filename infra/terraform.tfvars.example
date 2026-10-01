@@ -1,0 +1,13 @@
+# Copy to terraform.tfvars (gitignored) for local runs.
+subscription_id     = "00000000-0000-0000-0000-000000000000"
+resource_group_name = "rg-cloudresume"
+
+# eastus often has no Cosmos DB capacity for new accounts; eastus2 worked.
+cosmos_location = "eastus2"
+
+# Flip to true when you're ready for HTTPS + CDN (~$35/month while it exists).
+enable_front_door = false
+custom_domain     = "" # e.g. "resume.example.com"
+
+# Lets you test the counter from a local web server.
+extra_cors_origins = ["http://localhost:5500", "http://127.0.0.1:5500"]

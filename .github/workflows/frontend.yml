@@ -1,0 +1,44 @@
+name: Frontend
+
+on:
+  push:
+    branches: [main]
+    paths: ["frontend/**", ".github/workflows/frontend.yml"]
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Point the site at the deployed API
+        run: echo "window.RESUME_CONFIG = { apiUrl: \"${{ vars.API_URL }}\" };" > frontend/config.js
+
+      - uses: azure/login@v2
+        with:
+          client-id: ${{ vars.AZURE_CLIENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Upload to static website
+        run: >
+          az storage blob upload-batch
+          --account-name "${{ vars.SITE_STORAGE_ACCOUNT }}"
+          --destination '$web'
+          --source frontend
+          --overwrite
+          --auth-mode login
+
+      - name: Purge Front Door cache
+        if: vars.FRONT_DOOR_PROFILE != ''
+        run: >
+          az afd endpoint purge
+          --resource-group "${{ vars.AZURE_RESOURCE_GROUP }}"
+          --profile-name "${{ vars.FRONT_DOOR_PROFILE }}"
+          --endpoint-name "${{ vars.FRONT_DOOR_ENDPOINT }}"
+          --content-paths '/*'

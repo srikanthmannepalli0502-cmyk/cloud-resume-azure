@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | Resume</title>
+  <meta name="description" content="Resume of Your Name, cloud engineer.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <h1>Your Name</h1>
+    <p class="tagline">Cloud Engineer &middot; M.S. Student, Syracuse University</p>
+    <ul class="contact">
+      <li><a href="mailto:you@example.com">you@example.com</a></li>
+      <li><a href="https://www.linkedin.com/in/your-profile">LinkedIn</a></li>
+      <li><a href="https://github.com/your-username">GitHub</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <section>
+      <h2>Summary</h2>
+      <p>
+        Two or three sentences about who you are, what you build, and what role you are looking for.
+      </p>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <article>
+        <div class="row">
+          <h3>Syracuse University</h3>
+          <span class="date">Expected May 2027</span>
+        </div>
+        <p>M.S. in Your Program</p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <article>
+        <div class="row">
+          <h3>Job Title &middot; Company</h3>
+          <span class="date">Jan 2024 &ndash; Present</span>
+        </div>
+        <ul>
+          <li>Accomplishment with a measurable result.</li>
+          <li>Accomplishment with a measurable result.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <article>
+        <div class="row">
+          <h3>Serverless Resume Site on Azure</h3>
+          <a class="date" href="https://github.com/your-username/cloud-resume-azure">Source</a>
+        </div>
+        <ul>
+          <li>This site: Azure Storage static hosting, Azure Functions (Python), Cosmos DB, Front Door.</li>
+          <li>Infrastructure defined in Terraform; deployed by GitHub Actions using OIDC (no stored secrets).</li>
+        </ul>
+      </article>
+    </section>
+
+    <section>
+      <h2>Certifications</h2>
+      <ul>
+        <li>Microsoft Certified: Azure Fundamentals (AZ-900)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <p>Azure &middot; Terraform &middot; Python &middot; GitHub Actions &middot; SQL &middot; Linux</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Visitors: <span id="visitor-count">&hellip;</span></p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="counter.js"></script>
+</body>
+</html>
