@@ -78,6 +78,18 @@ $subjects = @{
   "github-main" = "repo:${GitHubRepo}:ref:refs/heads/main"
   "github-pr"   = "repo:${GitHubRepo}:pull_request"
 }
+# GitHub may send subjects that embed immutable owner/repo IDs, e.g.
+# repo:owner@123/repo@456:ref:refs/heads/main. Register those too when gh is available.
+if (Get-Command gh -ErrorAction SilentlyContinue) {
+  $ids = @(gh api "repos/$GitHubRepo" --jq '.owner.id, .id' 2>$null)
+  if ($LASTEXITCODE -eq 0 -and $ids.Count -eq 2) {
+    $ownerId, $repoId = $ids
+    $owner, $repo = $GitHubRepo -split '/'
+    $idBase = "repo:${owner}@${ownerId}/${repo}@${repoId}"
+    $subjects["github-main-ids"] = "${idBase}:ref:refs/heads/main"
+    $subjects["github-pr-ids"]   = "${idBase}:pull_request"
+  }
+}
 foreach ($name in $subjects.Keys) {
   $exists = Invoke-AzCli identity federated-credential list --identity-name $idName -g $stateRg --query "[?name=='$name'].name" -o tsv
   if (-not $exists) {

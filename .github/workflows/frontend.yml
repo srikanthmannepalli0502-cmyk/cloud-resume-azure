@@ -17,7 +17,8 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Point the site at the deployed API
-        run: echo "window.RESUME_CONFIG = { apiUrl: \"${{ vars.API_URL }}\" };" > frontend/config.js
+        run: |
+          echo "window.RESUME_CONFIG = { apiUrl: \"${{ vars.API_URL }}\" };" > frontend/config.js
 
       - uses: azure/login@v2
         with:
