@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name | Resume</title>
-  <meta name="description" content="Resume of Your Name, cloud engineer.">
+  <title>Srikanth Mannepalli | Resume</title>
+  <meta name="description" content="Srikanth Mannepalli: data analytics and data engineering. M.S. Applied Data Science, Syracuse University. SQL, Python, Snowflake, dbt, Tableau, Azure.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="hero">
-    <h1>Your Name</h1>
-    <p class="tagline">Cloud Engineer &middot; M.S. Student, Syracuse University</p>
+    <h1>Srikanth Mannepalli</h1>
+    <p class="tagline">Data Analytics &middot; Data Engineering &middot; Cloud &nbsp;|&nbsp; Syracuse, NY</p>
     <ul class="contact">
-      <li><a href="mailto:you@example.com">you@example.com</a></li>
-      <li><a href="https://www.linkedin.com/in/your-profile">LinkedIn</a></li>
-      <li><a href="https://github.com/your-username">GitHub</a></li>
+      <li><a href="mailto:srikanthmannepalli0502@gmail.com">srikanthmannepalli0502@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/srikanth-mannepalli05">LinkedIn</a></li>
+      <li><a href="https://github.com/srikanthmannepalli0502-cmyk">GitHub</a></li>
     </ul>
   </header>
 
@@ -22,31 +22,41 @@
     <section>
       <h2>Summary</h2>
       <p>
-        Two or three sentences about who you are, what you build, and what role you are looking for.
+        Data professional with 3 years of experience in financial transaction systems, automated ETL pipelines,
+        and BI reporting. Skilled in SQL, Python, COBOL and PL/SQL for collecting, cleaning and analyzing
+        operational, financial and customer data, and in building Tableau and Excel dashboards that surface KPIs
+        for executive decisions. Currently pursuing a Master&rsquo;s in Applied Data Science at Syracuse University,
+        with coursework in machine learning, data warehousing and big data analytics.
       </p>
-    </section>
-
-    <section>
-      <h2>Education</h2>
-      <article>
-        <div class="row">
-          <h3>Syracuse University</h3>
-          <span class="date">Expected May 2027</span>
-        </div>
-        <p>M.S. in Your Program</p>
-      </article>
     </section>
 
     <section>
       <h2>Experience</h2>
       <article>
         <div class="row">
-          <h3>Job Title &middot; Company</h3>
-          <span class="date">Jan 2024 &ndash; Present</span>
+          <h3>Student Technology Support &middot; Syracuse University iSchool</h3>
+          <span class="date">Jan 2026 &ndash; Present</span>
         </div>
         <ul>
-          <li>Accomplishment with a measurable result.</li>
-          <li>Accomplishment with a measurable result.</li>
+          <li>First point of contact for 500+ students, staff and faculty at the iSchool Help Desk, resolving 30+ Jira tickets per week across hardware, software and classroom technology.</li>
+          <li>Troubleshoot issues remotely and in person across 5 computer labs and 12+ classrooms, maintaining 98% equipment uptime.</li>
+          <li>Work with Student Consultants and IT staff on complex requests, lab maintenance and readiness of printers, workstations and AV equipment.</li>
+          <li>Support iSchool technology projects in process automation, workstation deployment, cloud computing and emerging technologies.</li>
+        </ul>
+      </article>
+      <article>
+        <div class="row">
+          <h3>System Engineer &middot; Tata Consultancy Services (TCS)</h3>
+          <span class="date">Dec 2021 &ndash; Dec 2024</span>
+        </div>
+        <ul>
+          <li>Supported the TCS BaNCS core banking platform for Saudi National Bank, maintaining transaction systems that handle 2M+ daily transactions, including ledger postings, reconciliations and regulatory reporting.</li>
+          <li>Collected, cleaned and transformed operational and financial data from 5+ source systems; built and maintained automated ETL pipelines with initial and incremental load strategies.</li>
+          <li>Designed database structures and wrote COBOL programs and SQL queries to extract, validate and analyze financial, workforce and customer data, delivering 15+ ad hoc analytics reports per month.</li>
+          <li>Built 10+ Tableau and Excel dashboards tracking transaction volume, error rates and reconciliation status for executive and operations teams.</li>
+          <li>Automated recurring data workflows with COBOL, Linux shell scripting and PL/SQL stored procedures, cutting manual reporting effort by ~60% and turnaround from 4 hours to under 45 minutes.</li>
+          <li>Partnered with business analysts, operations and finance across 3 business units to validate data integrity, troubleshoot pipelines and support A/B testing.</li>
+          <li>Managed source code and releases with Git across dev, staging and production environments.</li>
         </ul>
       </article>
     </section>
@@ -55,26 +65,94 @@
       <h2>Projects</h2>
       <article>
         <div class="row">
-          <h3>Serverless Resume Site on Azure</h3>
-          <a class="date" href="https://github.com/your-username/cloud-resume-azure">Source</a>
+          <h3>Serverless Resume Site on Azure (this site)</h3>
+          <a class="date" href="https://github.com/srikanthmannepalli0502-cmyk/cloud-resume-azure">Source</a>
         </div>
         <ul>
-          <li>This site: Azure Storage static hosting, Azure Functions (Python), Cosmos DB, Front Door.</li>
-          <li>Infrastructure defined in Terraform; deployed by GitHub Actions using OIDC (no stored secrets).</li>
+          <li>Built for the Cloud Resume Challenge: static site on Azure Storage with a visitor counter served by a Python Azure Function and stored in Cosmos DB (serverless).</li>
+          <li>All infrastructure defined in Terraform; three GitHub Actions pipelines test and deploy on every push, authenticating to Azure with OIDC and a managed identity, so no secrets are stored.</li>
+        </ul>
+      </article>
+      <article>
+        <div class="row">
+          <h3>Ride Sharing Analytics Data Lake and Pipeline</h3>
+          <a class="date" href="https://github.com/srikanthmannepalli0502-cmyk/ist722dbt">Source</a>
+        </div>
+        <ul>
+          <li>Architected a Snowflake cloud data warehouse with a star schema (trip fact table; driver, rider, location, payment and date dimensions) and dbt-powered ELT pipelines consolidating ride data from 4 disconnected sources.</li>
+          <li>Built automated data validation and transformation workflows with quality checks after every load, plus interactive KPI dashboards that cut data retrieval time by 70% versus querying raw tables.</li>
+        </ul>
+      </article>
+      <article>
+        <div class="row">
+          <h3>Automated Job Hunting Pipeline with AI Resume Tailoring</h3>
+          <a class="date" href="https://github.com/srikanthmannepalli0502-cmyk/job-hunter-auto">Source</a>
+        </div>
+        <ul>
+          <li>Built an end-to-end Python pipeline that scrapes LinkedIn and Indeed postings with Playwright, de-duplicates jobs across runs and scores each one 0&ndash;100 against a weighted skills profile.</li>
+          <li>Tailors the resume for top matches with an LLM (Llama 3.3 70B via Groq), generates a one-page ATS-friendly PDF with page-count verification, and auto-fills application forms; jobs are tracked in a SQL database through SQLAlchemy.</li>
+        </ul>
+      </article>
+      <article>
+        <div class="row">
+          <h3>Healthcare Spending vs Disease Outcomes</h3>
+          <a class="date" href="https://github.com/srikanthmannepalli0502-cmyk/Healthcare-Spending-Analysis">Source</a>
+        </div>
+        <ul>
+          <li>Merged the CDC Chronic Disease Indicators dataset (1M+ rows, 124 indicators) with KFF per-capita healthcare spending for 51 states over 2015&ndash;2020, selecting 15 disease indicators.</li>
+          <li>Recovered 67% missing disease data with Random Forest iterative imputation (scikit-learn), validated against observed values.</li>
+          <li>Implemented linear regression from scratch with gradient descent in PyTensor; found that higher spending does not predict lower disease rates, and identified efficient states (Colorado, Utah) with strong outcomes on modest budgets.</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Formula 1 Pit Stop Strategy Forecasting (ML)</h3>
+        <ul>
+          <li>Built a predictive model in Python with scikit-learn reaching 87% accuracy on pit stop timing, using 10,000+ lap records with data ingestion, cleansing and transformation before training.</li>
+          <li>Presented findings in interactive Tableau dashboards for non-technical stakeholders, documenting the full pipeline from raw data to final output.</li>
+        </ul>
+      </article>
+      <article>
+        <h3>NFL Defensive Strategy Analytics</h3>
+        <ul>
+          <li>Integrated 200K+ play-by-play records from multiple datasets into one clean analysis database with SQL and Python, with validation and quality checks across sources.</li>
+          <li>Built interactive Tableau dashboards that revealed a 23% higher blitz rate on 3rd-and-long, supporting data-driven strategy recommendations.</li>
         </ul>
       </article>
     </section>
 
     <section>
-      <h2>Certifications</h2>
-      <ul>
-        <li>Microsoft Certified: Azure Fundamentals (AZ-900)</li>
-      </ul>
+      <h2>Education</h2>
+      <article>
+        <div class="row">
+          <h3>Syracuse University</h3>
+          <span class="date">Expected Dec 2026</span>
+        </div>
+        <p>Master&rsquo;s, Applied Data Science &middot; GPA 3.6/4.0</p>
+        <p class="muted">Coursework: Database Management, Machine Learning, Data Visualization, Business Analytics, Data Warehouse, Big Data Analytics</p>
+      </article>
     </section>
 
     <section>
       <h2>Skills</h2>
-      <p>Azure &middot; Terraform &middot; Python &middot; GitHub Actions &middot; SQL &middot; Linux</p>
+      <ul class="skills">
+        <li><strong>Data Analysis &amp; BI:</strong> data collection &amp; cleaning, ad hoc analytics, financial &amp; operational reporting, A/B testing, KPI tracking</li>
+        <li><strong>Programming:</strong> SQL, PL/SQL, Python, R, COBOL, REST APIs, Linux shell scripting</li>
+        <li><strong>Databases &amp; Warehousing:</strong> Snowflake, Oracle, MySQL, Cosmos DB, dbt, ETL/ELT pipeline design</li>
+        <li><strong>Visualization:</strong> Tableau, Excel (pivot tables, VLOOKUP, charts), R Shiny</li>
+        <li><strong>Cloud &amp; DevOps:</strong> Azure (Functions, Storage, Cosmos DB), Oracle Cloud Infrastructure, Terraform, GitHub Actions, Git</li>
+        <li><strong>ML &amp; AI:</strong> scikit-learn, PyTensor, LLM integration</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Certifications</h2>
+      <ul>
+        <li>Oracle Cloud Infrastructure 2025 Certified Data Science Professional</li>
+        <li>Oracle Cloud Infrastructure 2025 Certified DevOps Professional</li>
+        <li>Snowflake Hands-On Essentials: Data Warehousing Workshop</li>
+        <li>IBM: Using Generative AI to Derive Insights from Data</li>
+        <li>TCS Xcelerate Warrior Certificate</li>
+      </ul>
     </section>
   </main>
 

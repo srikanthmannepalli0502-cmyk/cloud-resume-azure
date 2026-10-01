@@ -3,7 +3,7 @@
 My resume as a serverless website on Azure, with a live visitor counter, built for the
 [Cloud Resume Challenge](https://cloudresumechallenge.dev/docs/the-challenge/azure/).
 
-**Live site:** https://your-domain.example &nbsp;·&nbsp; **Blog post:** _link here_
+**Live site:** https://stcloudresumeweby4ajk1.z13.web.core.windows.net/ &nbsp;·&nbsp; **Blog post:** _coming soon_
 
 ![Infrastructure](../../actions/workflows/infra.yml/badge.svg)
 ![Backend](../../actions/workflows/backend.yml/badge.svg)
@@ -22,7 +22,7 @@ flowchart LR
 
 | Challenge step | Implementation |
 |---|---|
-| Certification | AZ-900 Azure Fundamentals |
+| Certification | AZ-900 Azure Fundamentals (in progress) |
 | HTML / CSS | [`frontend/`](frontend/) |
 | Static website | Azure Storage static website |
 | HTTPS + DNS | Azure Front Door Standard with a managed certificate |
