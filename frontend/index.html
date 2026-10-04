@@ -69,8 +69,8 @@
           <span class="date"><a href="h1b/">Live dashboard</a> &middot; <a href="https://github.com/srikanthmannepalli0502-cmyk/h1b-job-market-tracker">Source</a></span>
         </div>
         <ul>
-          <li>Built a dbt + DuckDB warehouse over 1.14M U.S. Department of Labor H-1B LCA records (FY2024&ndash;FY2026): Python/Polars ingestion that strips personal data, de-duplicates re-published cases, annualizes wages and classifies roles from job titles, guarded by 32 data tests and CI on synthetic data.</li>
-          <li>Published an interactive dashboard of which employers sponsor data, AI, cybersecurity, cloud and DevOps roles and what they pay, deployed to Azure Storage by GitHub Actions with OIDC; found AI-role sponsorship up 139% year over year while cloud, DevOps and BI fell 10&ndash;20%.</li>
+          <li>Built an Azure data pipeline over 1.57M U.S. Department of Labor H-1B filings (FY2024&ndash;FY2026) joined to USCIS approval data: an Azure Function converts quarterly releases in an ADLS Gen2 data lake, and a daily GitHub Actions job rebuilds a dbt + DuckDB warehouse (44 data tests) only when the lake changes; infrastructure in Terraform.</li>
+          <li>Published an interactive dashboard with an &ldquo;Ask the data&rdquo; assistant (Azure OpenAI) that turns plain-English questions into guarded, read-only SQL; found AI-role sponsorship more than doubled two years running while cloud, DevOps and BI sponsorship fell 10&ndash;20% in FY2026.</li>
         </ul>
       </article>
       <article>
@@ -149,8 +149,8 @@
         <li><strong>Programming:</strong> SQL, PL/SQL, Python, R, COBOL, REST APIs, Linux shell scripting</li>
         <li><strong>Databases &amp; Warehousing:</strong> Snowflake, Oracle, MySQL, Cosmos DB, dbt, ETL/ELT pipeline design</li>
         <li><strong>Visualization:</strong> Tableau, Excel (pivot tables, VLOOKUP, charts), R Shiny</li>
-        <li><strong>Cloud &amp; DevOps:</strong> Azure (Functions, Storage, Cosmos DB), Oracle Cloud Infrastructure, Terraform, GitHub Actions, Git</li>
-        <li><strong>ML &amp; AI:</strong> scikit-learn, PyTensor, LLM integration</li>
+        <li><strong>Cloud &amp; DevOps:</strong> Azure (Functions, Data Lake Storage Gen2, Cosmos DB), Oracle Cloud Infrastructure, Terraform, GitHub Actions, Git</li>
+        <li><strong>ML &amp; AI:</strong> scikit-learn, PyTensor, Azure OpenAI, LLM integration (text-to-SQL)</li>
       </ul>
     </section>
 
